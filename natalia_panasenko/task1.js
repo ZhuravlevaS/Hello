@@ -1,6 +1,6 @@
 db.products.updateMany(
   {
-      price: { $gt: 100 }
+      price: { $gte: 100 }
   },
-  { $mul: { balance: 1.035 } }
+  { $mul: { price: 1.035 } }
 )
