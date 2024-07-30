@@ -1,6 +1,6 @@
 db.users.updateMany(
     { 
-      blocked: false, 
+      is_blocked: {$ne: true}, 
       country: { $nin: ["France", "Germany"] }
     },
     { 
