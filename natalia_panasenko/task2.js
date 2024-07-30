@@ -4,7 +4,7 @@ db.users.updateMany(
       country: { $nin: ['Germany', 'France'] }
   },
   {
-      $mul: {
+      $inc: {
           balance: 100
       }
   }
