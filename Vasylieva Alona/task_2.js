@@ -1,7 +1,7 @@
 db.users.updateMany(
     {
         is_blocked: { $ne: true },
-        country: { $ne: ['France', 'Germany'] }        
+        country: { $nin: ['France', 'Germany'] }        
     }, 
     {
         $inc: {
