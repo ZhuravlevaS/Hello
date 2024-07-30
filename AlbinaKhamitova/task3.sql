@@ -1,0 +1,3 @@
+SELECT COUNT(*) AS TOTAL_ORDERS 
+FROM Orders
+Where CustomerID = 84
