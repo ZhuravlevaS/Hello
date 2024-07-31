@@ -5,6 +5,6 @@ db.users.updateMany(
   },
   {
     $unset: { is_blocked: null },
-    $inc: { balance: 50 },
+    $inc: { balance: 50 }
   }
 );
