@@ -1,6 +1,6 @@
 db.users.updateMany(
     {
-        country: { $in: 'China' }
+        country: { $in: 'China', is_blocked: true }
     },
     {
         $set: {is_blocked : false},
