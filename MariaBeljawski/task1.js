@@ -1,9 +1,10 @@
-db.users.updateMany({
-    country: { $nin: ["China"] },
-    is_blocked: { $eq: true }
-},
-    {
-        $set: { is_blocked: false },
-        $inc: { balance: 50 }
-    },
-)
+db.users.updateMany(
+  {
+    country: "China",
+    is_blocked: true,
+  },
+  {
+    $unset: { is_blocked: null },
+    $inc: { balance: 50 },
+  }
+);
