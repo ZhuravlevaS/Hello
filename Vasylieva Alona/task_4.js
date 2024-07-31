@@ -1,6 +1,6 @@
 db.users.find(
   {
-    balance: { $gte: 10, $lte: 1000 },
+    balance: { $gt: 10, $lt: 1000 },
     is_blocked: { $ne: true },
     country: { $nin: ["China", "France"] },
   },
