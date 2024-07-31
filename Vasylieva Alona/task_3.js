@@ -1,13 +1,10 @@
 db.users.updateMany(
-  { country: "China" },
   {
-    $unset: {
-      is_blocked: null,
-    },
+    country: "China",
+    is_blocked: true,
   },
   {
-    $inc: {
-      balance: 50,
-    },
+    $unset: { is_blocked: null },
+    $inc: { balance: 50 },
   }
 );
