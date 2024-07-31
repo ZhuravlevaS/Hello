@@ -5,9 +5,11 @@ db.users.find(
   {
       is_blocked: { $ne: true },
       country: { $nin: ['China', 'France'] },
-      balance: { $gt: 10, $lte: 1000 }
+      balance: { $gt: 10, $lt: 1000 }
   },
   {
-      fullname: 1, balance: 1, _id: 0
+      fullname: 1,
+      balance: 1,
+      _id: 0
   }
 )
